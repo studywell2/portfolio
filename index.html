@@ -315,6 +315,21 @@
         el.style.width = el.style.width;
       })
     })
+
+
+    function downloadResume() {
+    // ✅ Option 1: Use a local PDF (in the same folder as your HTML)
+    const resumePath = 'resume.pdf'; // replace with your actual file name
+
+    // Create a hidden link and trigger the download
+    const link = document.createElement('a');
+    link.href = resumePath;
+    link.download = 'abideen.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   </script>
 </body>
 </html>
